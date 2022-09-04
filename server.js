@@ -6,6 +6,9 @@ const cors = require('cors');
 const data  = {
     text: "Hello From Backend"
 }
+const products ={
+    
+}
 
 app.use(morgan('dev'));
 app.use(cors());
