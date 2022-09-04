@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require('morgan')
 const cors = require('cors');
-const ProductData = require('./data');
+const {ProductData,UserData} = require('./data');
 
 const data  = {
     text: "Hello From Backend"
@@ -17,6 +17,10 @@ app.get('/firstBackend', (req,res) =>{
 
 app.get('/getProducts',(req,res) => {
     res.json(ProductData);
+})
+
+app.get('/getUsers',(req,res) => {
+    res.json(UserData);
 })
 
 
